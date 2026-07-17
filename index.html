@@ -1,729 +1,1776 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uz">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ijtimoiy himoyaning milliy agentligi — PF-82 / PQ-176</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --ink:#122420;
-  --ink-soft:#33473f;
-  --paper:#f2f5ef;
-  --paper-2:#e7ecdf;
-  --card:#ffffff;
-  --deep:#0d3733;
-  --deep-2:#0a2b28;
-  --gold:#c9973f;
-  --gold-soft:#e7c98a;
-  --sky:#2c7a94;
-  --line:#d7ddcd;
-  --shadow: 0 20px 50px -25px rgba(13,55,51,0.35);
-  --radius: 14px;
-  --maxw: 1180px;
-  --serif: "Fraunces", Georgia, serif;
-  --sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-  --mono: "IBM Plex Mono", monospace;
-}
-*{box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-@media (prefers-reduced-motion: reduce){
-  html{scroll-behavior:auto;}
-  *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
-}
-body{
-  margin:0;
-  font-family:var(--sans);
-  color:var(--ink);
-  background:var(--paper);
-  line-height:1.55;
-  -webkit-font-smoothing:antialiased;
-}
-h1,h2,h3,h4{font-family:var(--serif); margin:0; font-weight:600; color:var(--deep-2);}
-p{margin:0;}
-a{color:inherit;}
-.wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
-.eyebrow{
-  font-family:var(--mono); text-transform:uppercase; letter-spacing:0.12em; font-size:12.5px;
-  color:var(--gold); font-weight:600;
-}
-button{font-family:inherit; cursor:pointer;}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ijtimoiy himoyaning milliy agentligi — PF-82 / PQ-176</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #122420;
+        --ink-soft: #33473f;
+        --paper: #f2f5ef;
+        --paper-2: #e7ecdf;
+        --card: #ffffff;
+        --deep: #0d3733;
+        --deep-2: #0a2b28;
+        --gold: #c9973f;
+        --gold-soft: #e7c98a;
+        --sky: #2c7a94;
+        --line: #d7ddcd;
+        --shadow: 0 20px 50px -25px rgba(13, 55, 51, 0.35);
+        --radius: 14px;
+        --maxw: 1180px;
+        --serif: "Fraunces", Georgia, serif;
+        --sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+        --mono: "IBM Plex Mono", monospace;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        * {
+          animation-duration: 0.001ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.001ms !important;
+        }
+      }
+      body {
+        margin: 0;
+        font-family: var(--sans);
+        color: var(--ink);
+        background: var(--paper);
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: var(--serif);
+        margin: 0;
+        font-weight: 600;
+        color: var(--deep-2);
+      }
+      p {
+        margin: 0;
+      }
+      a {
+        color: inherit;
+      }
+      .wrap {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 0 28px;
+      }
+      .eyebrow {
+        font-family: var(--mono);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 12.5px;
+        color: var(--gold);
+        font-weight: 600;
+      }
+      button {
+        font-family: inherit;
+        cursor: pointer;
+      }
 
-/* ---------- NAV ---------- */
-header.site-nav{
-  position:sticky; top:0; z-index:100;
-  background:rgba(242,245,239,0.88); backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--line);
-}
-.nav-inner{
-  display:flex; align-items:center; justify-content:space-between;
-  padding:14px 28px; max-width:var(--maxw); margin:0 auto;
-}
-.brand{display:flex; align-items:center; gap:10px; font-family:var(--serif); font-weight:700; font-size:17px; color:var(--deep-2);}
-.brand .seal-mini{width:28px; height:28px; border-radius:50%; background:conic-gradient(from 180deg, var(--gold), var(--deep), var(--gold-soft), var(--deep)); flex:0 0 auto;}
-nav.links{display:flex; gap:26px; font-size:14.5px; font-weight:500;}
-nav.links a{text-decoration:none; color:var(--ink-soft); padding:6px 2px; border-bottom:2px solid transparent; transition:.2s;}
-nav.links a:hover, nav.links a.active{color:var(--deep-2); border-color:var(--gold);}
-.src-tag{
-  display:inline-flex; align-items:center; gap:6px; font-family:var(--mono); font-size:11px; font-weight:600;
-  letter-spacing:.04em; padding:5px 10px; border-radius:999px; margin-bottom:14px;
-}
-.src-tag.pf{background:#ece4d1; color:#7a5b1e;}
-.src-tag.pq{background:#dcebe6; color:#0d5c50;}
-.src-tag.both{background:linear-gradient(90deg,#ece4d1,#dcebe6); color:#3a4a2f;}
-.nav-toggle{display:none; background:none; border:1px solid var(--line); border-radius:8px; padding:8px 10px;}
-.nav-toggle span{display:block; width:18px; height:2px; background:var(--deep-2); margin:4px 0;}
-@media (max-width: 860px){
-  nav.links{position:fixed; inset:60px 0 auto 0; background:var(--paper); flex-direction:column; padding:14px 28px 22px; border-bottom:1px solid var(--line); transform:translateY(-130%); transition:transform .3s ease; gap:14px;}
-  nav.links.open{transform:translateY(0);}
-  .nav-toggle{display:block;}
-}
+      /* ---------- NAV ---------- */
+      header.site-nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(242, 245, 239, 0.88);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--line);
+      }
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 28px;
+        max-width: var(--maxw);
+        margin: 0 auto;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: var(--serif);
+        font-weight: 700;
+        font-size: 17px;
+        color: var(--deep-2);
+      }
+      .brand .seal-mini {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: conic-gradient(
+          from 180deg,
+          var(--gold),
+          var(--deep),
+          var(--gold-soft),
+          var(--deep)
+        );
+        flex: 0 0 auto;
+      }
+      nav.links {
+        display: flex;
+        gap: 26px;
+        font-size: 14.5px;
+        font-weight: 500;
+      }
+      nav.links a {
+        text-decoration: none;
+        color: var(--ink-soft);
+        padding: 6px 2px;
+        border-bottom: 2px solid transparent;
+        transition: 0.2s;
+      }
+      nav.links a:hover,
+      nav.links a.active {
+        color: var(--deep-2);
+        border-color: var(--gold);
+      }
+      .src-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-family: var(--mono);
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        padding: 5px 10px;
+        border-radius: 999px;
+        margin-bottom: 14px;
+      }
+      .src-tag.pf {
+        background: #ece4d1;
+        color: #7a5b1e;
+      }
+      .src-tag.pq {
+        background: #dcebe6;
+        color: #0d5c50;
+      }
+      .src-tag.both {
+        background: linear-gradient(90deg, #ece4d1, #dcebe6);
+        color: #3a4a2f;
+      }
+      .nav-toggle {
+        display: none;
+        background: none;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 8px 10px;
+      }
+      .nav-toggle span {
+        display: block;
+        width: 18px;
+        height: 2px;
+        background: var(--deep-2);
+        margin: 4px 0;
+      }
+      @media (max-width: 860px) {
+        nav.links {
+          position: fixed;
+          inset: 60px 0 auto 0;
+          background: var(--paper);
+          flex-direction: column;
+          padding: 14px 28px 22px;
+          border-bottom: 1px solid var(--line);
+          transform: translateY(-130%);
+          transition: transform 0.3s ease;
+          gap: 14px;
+        }
+        nav.links.open {
+          transform: translateY(0);
+        }
+        .nav-toggle {
+          display: block;
+        }
+      }
 
-/* ---------- HERO ---------- */
-.hero{
-  background: radial-gradient(120% 140% at 85% -10%, #124a44 0%, var(--deep) 45%, var(--deep-2) 100%);
-  color:#eef4ef; position:relative; overflow:hidden;
-  padding:64px 0 84px;
-}
-.hero::after{
-  content:""; position:absolute; inset:0;
-  background-image:radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
-  background-size:22px 22px; opacity:.5; pointer-events:none;
-}
-.hero-grid{display:grid; grid-template-columns:1.15fr 0.85fr; gap:48px; align-items:center; position:relative;}
-@media (max-width:900px){.hero-grid{grid-template-columns:1fr; gap:40px;}}
-.hero h1{
-  color:#fbf9f1; font-size:clamp(34px,4.6vw,58px); line-height:1.06; margin:16px 0 20px; letter-spacing:-0.01em;
-}
-.hero p.lead{color:#cfe2dc; font-size:17.5px; max-width:52ch; margin-bottom:28px;}
-.hero-cta{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:36px;}
-.btn{
-  display:inline-flex; align-items:center; gap:8px; padding:12px 20px; border-radius:999px;
-  font-weight:600; font-size:14.5px; text-decoration:none; border:1px solid transparent; transition:.2s;
-}
-.btn-primary{background:var(--gold); color:#25200b;}
-.btn-primary:hover{background:var(--gold-soft); transform:translateY(-1px);}
-.btn-ghost{border-color:rgba(255,255,255,0.35); color:#eef4ef;}
-.btn-ghost:hover{background:rgba(255,255,255,0.08);}
-.hero-chips{display:flex; flex-wrap:wrap; gap:10px;}
-.chip{
-  font-family:var(--mono); font-size:12.5px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.16);
-  padding:7px 12px; border-radius:999px; color:#dcece6;
-}
-.chip b{color:var(--gold-soft); font-weight:600;}
+      /* ---------- HERO ---------- */
+      .hero {
+        background: radial-gradient(
+          120% 140% at 85% -10%,
+          #124a44 0%,
+          var(--deep) 45%,
+          var(--deep-2) 100%
+        );
+        color: #eef4ef;
+        position: relative;
+        overflow: hidden;
+        padding: 64px 0 84px;
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(
+          rgba(255, 255, 255, 0.05) 1px,
+          transparent 1px
+        );
+        background-size: 22px 22px;
+        opacity: 0.5;
+        pointer-events: none;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 48px;
+        align-items: center;
+        position: relative;
+      }
+      @media (max-width: 900px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+      }
+      .hero h1 {
+        color: #fbf9f1;
+        font-size: clamp(34px, 4.6vw, 58px);
+        line-height: 1.06;
+        margin: 16px 0 20px;
+        letter-spacing: -0.01em;
+      }
+      .hero p.lead {
+        color: #cfe2dc;
+        font-size: 17.5px;
+        max-width: 52ch;
+        margin-bottom: 28px;
+      }
+      .hero-cta {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin-bottom: 36px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 20px;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 14.5px;
+        text-decoration: none;
+        border: 1px solid transparent;
+        transition: 0.2s;
+      }
+      .btn-primary {
+        background: var(--gold);
+        color: #25200b;
+      }
+      .btn-primary:hover {
+        background: var(--gold-soft);
+        transform: translateY(-1px);
+      }
+      .btn-ghost {
+        border-color: rgba(255, 255, 255, 0.35);
+        color: #eef4ef;
+      }
+      .btn-ghost:hover {
+        background: rgba(255, 255, 255, 0.08);
+      }
+      .hero-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .chip {
+        font-family: var(--mono);
+        font-size: 12.5px;
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        padding: 7px 12px;
+        border-radius: 999px;
+        color: #dcece6;
+      }
+      .chip b {
+        color: var(--gold-soft);
+        font-weight: 600;
+      }
 
-/* seal */
-.seal-wrap{display:flex; justify-content:center; align-items:center; position:relative;}
-.seal{
-  width:min(320px, 78vw); aspect-ratio:1/1; border-radius:50%; position:relative;
-  background:radial-gradient(circle at 35% 30%, #164e47, var(--deep-2) 70%);
-  border:2px solid rgba(201,151,63,0.5);
-  box-shadow: 0 0 0 10px rgba(201,151,63,0.06), 0 30px 60px -20px rgba(0,0,0,0.6);
-  display:flex; align-items:center; justify-content:center;
-}
-.seal svg{position:absolute; inset:0; width:100%; height:100%; animation:spin 34s linear infinite;}
-.seal .core{
-  width:46%; height:46%; border-radius:50%; background:linear-gradient(145deg,#e7c98a,#c9973f);
-  display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;
-  color:#26210c; box-shadow: inset 0 2px 6px rgba(255,255,255,0.4), 0 8px 20px -6px rgba(0,0,0,0.5);
-}
-.seal .core strong{font-family:var(--mono); font-size:11px; letter-spacing:0.06em;}
-.seal .core span{font-family:var(--serif); font-weight:700; font-size:20px; margin-top:2px;}
-@keyframes spin{to{transform:rotate(360deg);}}
+      /* seal */
+      .seal-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+      .seal {
+        width: min(320px, 78vw);
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        position: relative;
+        background: radial-gradient(
+          circle at 35% 30%,
+          #164e47,
+          var(--deep-2) 70%
+        );
+        border: 2px solid rgba(201, 151, 63, 0.5);
+        box-shadow:
+          0 0 0 10px rgba(201, 151, 63, 0.06),
+          0 30px 60px -20px rgba(0, 0, 0, 0.6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .seal svg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        animation: spin 34s linear infinite;
+      }
+      .seal .core {
+        width: 46%;
+        height: 46%;
+        border-radius: 50%;
+        background: linear-gradient(145deg, #e7c98a, #c9973f);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #26210c;
+        box-shadow:
+          inset 0 2px 6px rgba(255, 255, 255, 0.4),
+          0 8px 20px -6px rgba(0, 0, 0, 0.5);
+      }
+      .seal .core strong {
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.06em;
+      }
+      .seal .core span {
+        font-family: var(--serif);
+        font-weight: 700;
+        font-size: 20px;
+        margin-top: 2px;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
 
-/* ---------- SECTIONS ---------- */
-section{padding:84px 0;}
-.section-head{max-width:640px; margin-bottom:44px;}
-.section-head h2{font-size:clamp(26px,3vw,36px); margin-top:10px; letter-spacing:-0.01em;}
-.section-head p{color:var(--ink-soft); margin-top:12px; font-size:15.5px;}
-.reveal{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease;}
-.reveal.in{opacity:1; transform:translateY(0);}
+      /* ---------- SECTIONS ---------- */
+      section {
+        padding: 84px 0;
+      }
+      .section-head {
+        max-width: 640px;
+        margin-bottom: 44px;
+      }
+      .section-head h2 {
+        font-size: clamp(26px, 3vw, 36px);
+        margin-top: 10px;
+        letter-spacing: -0.01em;
+      }
+      .section-head p {
+        color: var(--ink-soft);
+        margin-top: 12px;
+        font-size: 15.5px;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(18px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .reveal.in {
+        opacity: 1;
+        transform: translateY(0);
+      }
 
-/* stats */
-.stat-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:18px;}
-@media (max-width:900px){.stat-grid{grid-template-columns:repeat(2,1fr);}}
-@media (max-width:520px){.stat-grid{grid-template-columns:1fr;}}
-.stat-card{
-  background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
-  padding:26px 22px; box-shadow:var(--shadow);
-}
-.stat-card .num{font-family:var(--serif); font-weight:700; font-size:40px; color:var(--deep); display:flex; align-items:baseline; gap:2px;}
-.stat-card .num small{font-family:var(--mono); font-size:16px; color:var(--gold); font-weight:600;}
-.stat-card .lbl{margin-top:8px; font-size:13.8px; color:var(--ink-soft); line-height:1.4;}
+      /* stats */
+      .stat-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+      }
+      @media (max-width: 900px) {
+        .stat-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 520px) {
+        .stat-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .stat-card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 26px 22px;
+        box-shadow: var(--shadow);
+      }
+      .stat-card .num {
+        font-family: var(--serif);
+        font-weight: 700;
+        font-size: 40px;
+        color: var(--deep);
+        display: flex;
+        align-items: baseline;
+        gap: 2px;
+      }
+      .stat-card .num small {
+        font-family: var(--mono);
+        font-size: 16px;
+        color: var(--gold);
+        font-weight: 600;
+      }
+      .stat-card .lbl {
+        margin-top: 8px;
+        font-size: 13.8px;
+        color: var(--ink-soft);
+        line-height: 1.4;
+      }
 
-/* agency band */
-.agency-band{
-  background:var(--paper-2); border-radius:20px; padding:42px; display:grid; grid-template-columns:1.1fr 1fr; gap:40px;
-}
-@media (max-width:900px){.agency-band{grid-template-columns:1fr; padding:28px;}}
-.agency-band h3{font-size:24px; margin-bottom:12px;}
-.agency-band p{color:var(--ink-soft); font-size:15.2px; margin-bottom:14px;}
-.mini-stats{display:flex; gap:14px; flex-wrap:wrap; margin-top:18px;}
-.mini-stat{background:var(--card); border-radius:12px; padding:14px 16px; border:1px solid var(--line); min-width:130px;}
-.mini-stat .n{font-family:var(--mono); font-weight:600; font-size:20px; color:var(--deep);}
-.mini-stat .l{font-size:12px; color:var(--ink-soft); margin-top:2px;}
-.insan-card{background:var(--card); border-radius:16px; padding:24px; border:1px solid var(--line); box-shadow:var(--shadow);}
-.insan-card h4{font-size:16px; margin-bottom:10px; color:var(--deep);}
-.insan-card ul{margin:0; padding-left:18px; color:var(--ink-soft); font-size:14.5px;}
-.insan-card li{margin-bottom:8px;}
+      /* agency band */
+      .agency-band {
+        background: var(--paper-2);
+        border-radius: 20px;
+        padding: 42px;
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: 40px;
+      }
+      @media (max-width: 900px) {
+        .agency-band {
+          grid-template-columns: 1fr;
+          padding: 28px;
+        }
+      }
+      .agency-band h3 {
+        font-size: 24px;
+        margin-bottom: 12px;
+      }
+      .agency-band p {
+        color: var(--ink-soft);
+        font-size: 15.2px;
+        margin-bottom: 14px;
+      }
+      .mini-stats {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin-top: 18px;
+      }
+      .mini-stat {
+        background: var(--card);
+        border-radius: 12px;
+        padding: 14px 16px;
+        border: 1px solid var(--line);
+        min-width: 130px;
+      }
+      .mini-stat .n {
+        font-family: var(--mono);
+        font-weight: 600;
+        font-size: 20px;
+        color: var(--deep);
+      }
+      .mini-stat .l {
+        font-size: 12px;
+        color: var(--ink-soft);
+        margin-top: 2px;
+      }
+      .insan-card {
+        background: var(--card);
+        border-radius: 16px;
+        padding: 24px;
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+      }
+      .insan-card h4 {
+        font-size: 16px;
+        margin-bottom: 10px;
+        color: var(--deep);
+      }
+      .insan-card ul {
+        margin: 0;
+        padding-left: 18px;
+        color: var(--ink-soft);
+        font-size: 14.5px;
+      }
+      .insan-card li {
+        margin-bottom: 8px;
+      }
 
-/* directions tabs */
-.dir-layout{display:grid; grid-template-columns:300px 1fr; gap:0; border:1px solid var(--line); border-radius:18px; overflow:hidden; background:var(--card); box-shadow:var(--shadow);}
-@media (max-width:820px){.dir-layout{grid-template-columns:1fr;}}
-.dir-list{background:var(--deep-2); padding:10px;}
-.dir-item{
-  width:100%; text-align:left; background:none; border:none; color:#cfe2dc; padding:14px 16px; border-radius:10px;
-  display:flex; gap:12px; align-items:flex-start; font-size:14.5px; margin-bottom:4px; transition:.2s;
-}
-.dir-item .roman{font-family:var(--mono); font-size:12px; color:var(--gold); flex:0 0 auto; padding-top:2px;}
-.dir-item:hover{background:rgba(255,255,255,0.06);}
-.dir-item.active{background:var(--gold); color:#2a2409;}
-.dir-item.active .roman{color:#2a2409;}
-.dir-panel{padding:38px; min-height:320px;}
-.dir-panel h3{font-size:22px; margin-bottom:6px;}
-.dir-panel .tagline{color:var(--gold); font-family:var(--mono); font-size:12.5px; text-transform:uppercase; letter-spacing:.08em; margin-bottom:16px; display:block;}
-.dir-panel ul{padding-left:20px; color:var(--ink-soft); font-size:15px;}
-.dir-panel li{margin-bottom:10px;}
+      /* directions tabs */
+      .dir-layout {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: 0;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        overflow: hidden;
+        background: var(--card);
+        box-shadow: var(--shadow);
+      }
+      @media (max-width: 820px) {
+        .dir-layout {
+          grid-template-columns: 1fr;
+        }
+      }
+      .dir-list {
+        background: var(--deep-2);
+        padding: 10px;
+      }
+      .dir-item {
+        width: 100%;
+        text-align: left;
+        background: none;
+        border: none;
+        color: #cfe2dc;
+        padding: 14px 16px;
+        border-radius: 10px;
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        font-size: 14.5px;
+        margin-bottom: 4px;
+        transition: 0.2s;
+      }
+      .dir-item .roman {
+        font-family: var(--mono);
+        font-size: 12px;
+        color: var(--gold);
+        flex: 0 0 auto;
+        padding-top: 2px;
+      }
+      .dir-item:hover {
+        background: rgba(255, 255, 255, 0.06);
+      }
+      .dir-item.active {
+        background: var(--gold);
+        color: #2a2409;
+      }
+      .dir-item.active .roman {
+        color: #2a2409;
+      }
+      .dir-panel {
+        padding: 38px;
+        min-height: 320px;
+      }
+      .dir-panel h3 {
+        font-size: 22px;
+        margin-bottom: 6px;
+      }
+      .dir-panel .tagline {
+        color: var(--gold);
+        font-family: var(--mono);
+        font-size: 12.5px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 16px;
+        display: block;
+      }
+      .dir-panel ul {
+        padding-left: 20px;
+        color: var(--ink-soft);
+        font-size: 15px;
+      }
+      .dir-panel li {
+        margin-bottom: 10px;
+      }
 
-/* timeline */
-.timeline{position:relative; margin-top:20px;}
-.timeline::before{content:""; position:absolute; left:19px; top:6px; bottom:6px; width:2px; background:var(--line);}
-.t-item{position:relative; padding:0 0 34px 56px;}
-.t-dot{
-  position:absolute; left:6px; top:2px; width:28px; height:28px; border-radius:50%; background:var(--card);
-  border:2px solid var(--deep); display:flex; align-items:center; justify-content:center; cursor:pointer;
-  font-family:var(--mono); font-size:11px; font-weight:700; color:var(--deep); transition:.2s;
-}
-.t-item.open .t-dot{background:var(--deep); color:#fff;}
-.t-date{font-family:var(--mono); font-size:13px; color:var(--gold); font-weight:600; margin-bottom:6px; display:block; cursor:pointer;}
-.t-title{font-size:17px; font-weight:600; margin-bottom:8px; cursor:pointer;}
-.t-body{max-height:0; overflow:hidden; transition:max-height .4s ease;}
-.t-item.open .t-body{max-height:400px;}
-.t-body ul{padding-left:18px; color:var(--ink-soft); font-size:14.5px; margin:10px 0 0;}
-.t-body li{margin-bottom:7px;}
-.t-tag{display:inline-block; font-size:11px; font-family:var(--mono); background:var(--paper-2); padding:3px 8px; border-radius:999px; margin-top:8px; color:var(--ink-soft);}
+      /* timeline */
+      .timeline {
+        position: relative;
+        margin-top: 20px;
+      }
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 19px;
+        top: 6px;
+        bottom: 6px;
+        width: 2px;
+        background: var(--line);
+      }
+      .t-item {
+        position: relative;
+        padding: 0 0 34px 56px;
+      }
+      .t-dot {
+        position: absolute;
+        left: 6px;
+        top: 2px;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: var(--card);
+        border: 2px solid var(--deep);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-family: var(--mono);
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--deep);
+        transition: 0.2s;
+      }
+      .t-item.open .t-dot {
+        background: var(--deep);
+        color: #fff;
+      }
+      .t-date {
+        font-family: var(--mono);
+        font-size: 13px;
+        color: var(--gold);
+        font-weight: 600;
+        margin-bottom: 6px;
+        display: block;
+        cursor: pointer;
+      }
+      .t-title {
+        font-size: 17px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        cursor: pointer;
+      }
+      .t-body {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+      }
+      .t-item.open .t-body {
+        max-height: 400px;
+      }
+      .t-body ul {
+        padding-left: 18px;
+        color: var(--ink-soft);
+        font-size: 14.5px;
+        margin: 10px 0 0;
+      }
+      .t-body li {
+        margin-bottom: 7px;
+      }
+      .t-tag {
+        display: inline-block;
+        font-size: 11px;
+        font-family: var(--mono);
+        background: var(--paper-2);
+        padding: 3px 8px;
+        border-radius: 999px;
+        margin-top: 8px;
+        color: var(--ink-soft);
+      }
 
-/* digital systems */
-.digi-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
-@media (max-width:900px){.digi-grid{grid-template-columns:1fr;}}
-.digi-card{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:24px; box-shadow:var(--shadow);}
-.digi-card .icon{width:40px; height:40px; border-radius:10px; background:var(--sky); margin-bottom:14px; display:flex; align-items:center; justify-content:center; color:#fff; font-family:var(--mono); font-weight:700;}
-.digi-card h4{font-size:16.5px; margin-bottom:8px;}
-.digi-card p{color:var(--ink-soft); font-size:14px;}
+      /* digital systems */
+      .digi-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+      @media (max-width: 900px) {
+        .digi-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .digi-card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 24px;
+        box-shadow: var(--shadow);
+      }
+      .digi-card .icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        background: var(--sky);
+        margin-bottom: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-family: var(--mono);
+        font-weight: 700;
+      }
+      .digi-card h4 {
+        font-size: 16.5px;
+        margin-bottom: 8px;
+      }
+      .digi-card p {
+        color: var(--ink-soft);
+        font-size: 14px;
+      }
 
-/* fund filter */
-.fund-filters{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:22px;}
-.fund-filter-btn{
-  border:1px solid var(--line); background:var(--card); padding:9px 16px; border-radius:999px; font-size:13.5px; font-weight:600; color:var(--ink-soft); transition:.2s;
-}
-.fund-filter-btn.active{background:var(--deep); color:#fff; border-color:var(--deep);}
-.fund-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(230px,1fr)); gap:14px;}
-.fund-item{
-  background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 18px; font-size:13.8px; color:var(--ink-soft);
-  transition:.25s; display:none;
-}
-.fund-item.show{display:block; animation:fadeUp .4s ease;}
-@keyframes fadeUp{from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:translateY(0);}}
-.fund-item b{display:block; color:var(--deep-2); font-family:var(--serif); font-size:14.5px; margin-bottom:4px;}
+      /* fund filter */
+      .fund-filters {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 22px;
+      }
+      .fund-filter-btn {
+        border: 1px solid var(--line);
+        background: var(--card);
+        padding: 9px 16px;
+        border-radius: 999px;
+        font-size: 13.5px;
+        font-weight: 600;
+        color: var(--ink-soft);
+        transition: 0.2s;
+      }
+      .fund-filter-btn.active {
+        background: var(--deep);
+        color: #fff;
+        border-color: var(--deep);
+      }
+      .fund-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+        gap: 14px;
+      }
+      .fund-item {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 16px 18px;
+        font-size: 13.8px;
+        color: var(--ink-soft);
+        transition: 0.25s;
+        display: none;
+      }
+      .fund-item.show {
+        display: block;
+        animation: fadeUp 0.4s ease;
+      }
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(6px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .fund-item b {
+        display: block;
+        color: var(--deep-2);
+        font-family: var(--serif);
+        font-size: 14.5px;
+        margin-bottom: 4px;
+      }
 
-/* org chart */
-.org-tree{display:flex; flex-direction:column; align-items:center; gap:0;}
-.org-root{
-  background:var(--deep); color:#fff; padding:16px 26px; border-radius:12px; font-weight:700; text-align:center;
-  font-family:var(--serif); font-size:17px; box-shadow:var(--shadow); margin-bottom:8px;
-}
-.org-connector{width:2px; height:26px; background:var(--line);}
-.org-branches{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; width:100%; margin-top:8px;}
-@media (max-width:900px){.org-branches{grid-template-columns:repeat(2,1fr);}}
-@media (max-width:560px){.org-branches{grid-template-columns:1fr;}}
-.org-node{background:var(--card); border:1px solid var(--line); border-radius:12px; overflow:hidden;}
-.org-node button{
-  width:100%; text-align:left; background:none; border:none; padding:14px 16px; font-size:13.8px; font-weight:600; color:var(--deep-2);
-  display:flex; justify-content:space-between; align-items:center; gap:8px;
-}
-.org-node button .plus{font-family:var(--mono); color:var(--gold); font-size:16px; transition:.2s;}
-.org-node.open button .plus{transform:rotate(45deg);}
-.org-node .sub{max-height:0; overflow:hidden; transition:max-height .35s ease; padding:0 16px;}
-.org-node.open .sub{max-height:200px; padding:0 16px 14px;}
-.org-node .sub p{font-size:12.8px; color:var(--ink-soft); line-height:1.5;}
+      /* org chart */
+      .org-tree {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+      }
+      .org-root {
+        background: var(--deep);
+        color: #fff;
+        padding: 16px 26px;
+        border-radius: 12px;
+        font-weight: 700;
+        text-align: center;
+        font-family: var(--serif);
+        font-size: 17px;
+        box-shadow: var(--shadow);
+        margin-bottom: 8px;
+      }
+      .org-connector {
+        width: 2px;
+        height: 26px;
+        background: var(--line);
+      }
+      .org-branches {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+        width: 100%;
+        margin-top: 8px;
+      }
+      @media (max-width: 900px) {
+        .org-branches {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 560px) {
+        .org-branches {
+          grid-template-columns: 1fr;
+        }
+      }
+      .org-node {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        overflow: hidden;
+      }
+      .org-node button {
+        width: 100%;
+        text-align: left;
+        background: none;
+        border: none;
+        padding: 14px 16px;
+        font-size: 13.8px;
+        font-weight: 600;
+        color: var(--deep-2);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+      }
+      .org-node button .plus {
+        font-family: var(--mono);
+        color: var(--gold);
+        font-size: 16px;
+        transition: 0.2s;
+      }
+      .org-node.open button .plus {
+        transform: rotate(45deg);
+      }
+      .org-node .sub {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+        padding: 0 16px;
+      }
+      .org-node.open .sub {
+        max-height: 200px;
+        padding: 0 16px 14px;
+      }
+      .org-node .sub p {
+        font-size: 12.8px;
+        color: var(--ink-soft);
+        line-height: 1.5;
+      }
 
-/* footer */
-footer{background:var(--deep-2); color:#c9d8d2; padding:52px 0 30px; margin-top:20px;}
-footer .foot-grid{display:flex; justify-content:space-between; gap:30px; flex-wrap:wrap;}
-footer h5{color:#fff; font-family:var(--serif); font-size:18px; margin-bottom:10px;}
-footer p{font-size:13.5px; color:#a9beb6; max-width:44ch;}
-footer .src{font-family:var(--mono); font-size:12px; color:#8fa79e; margin-top:18px; line-height:1.8;}
-.back-top{color:var(--gold-soft); font-size:13px; text-decoration:none; font-weight:600;}
+      /* footer */
+      footer {
+        background: var(--deep-2);
+        color: #c9d8d2;
+        padding: 52px 0 30px;
+        margin-top: 20px;
+      }
+      footer .foot-grid {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+      footer h5 {
+        color: #fff;
+        font-family: var(--serif);
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      footer p {
+        font-size: 13.5px;
+        color: #a9beb6;
+        max-width: 44ch;
+      }
+      footer .src {
+        font-family: var(--mono);
+        font-size: 12px;
+        color: #8fa79e;
+        margin-top: 18px;
+        line-height: 1.8;
+      }
+      .back-top {
+        color: var(--gold-soft);
+        font-size: 13px;
+        text-decoration: none;
+        font-weight: 600;
+      }
 
-::selection{background:var(--gold-soft); color:#26210c;}
-</style>
-</head>
-<body>
-
-<header class="site-nav">
-  <div class="nav-inner">
-    <div class="brand"><span class="seal-mini"></span> Ijtimoiy himoya · PF‑82</div>
-    <nav class="links" id="navLinks">
-      <a href="#nima-uchun">Nima uchun</a>
-      <a href="#agentlik">Agentlik</a>
-      <a href="#yonalishlar">Yoʻnalishlar</a>
-      <a href="#bosqichlar">Bosqichlar</a>
-      <a href="#raqamli">Raqamli tizim</a>
-      <a href="#jamgarma">Jamgʻarma</a>
-      <a href="#tuzilma">Tuzilma</a>
-      <a href="#qollab">PQ‑176 tafsilotlari</a>
-    </nav>
-    <button class="nav-toggle" id="navToggle" aria-label="Menyu"><span></span><span></span><span></span></button>
-  </div>
-</header>
-
-<div style="background:#fbfaf5; border-bottom:1px solid var(--line); padding:8px 0;">
-  <div class="wrap" style="display:flex; gap:18px; flex-wrap:wrap; align-items:center; font-family:var(--mono); font-size:11.5px; color:var(--ink-soft);">
-    <span>Manba belgilari:</span>
-    <span class="src-tag pf" style="margin:0;">📄 PF‑82 farmoni</span>
-    <span class="src-tag pq" style="margin:0;">📄 PQ‑176 qarori</span>
-    <span class="src-tag both" style="margin:0;">📄 Ikkalasi birga</span>
-  </div>
-</div>
-
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="eyebrow">PF‑82 farmoni · PQ‑176 qarori — 2023‑yil 1‑iyun</span>
-      <h1>Ijtimoiy himoyaning yangi arxitekturasi</h1>
-      <p class="lead">Prezident farmoni va qarori asosida tashkil etilgan yagona Milliy agentlik ijtimoiy yordamni har bir xonadon eshigigacha olib boradi — mahalladan tortib davlat darajasigacha bitta tizimda.</p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="#yonalishlar">7 ta yoʻnalishni koʻrish</a>
-        <a class="btn btn-ghost" href="#bosqichlar">Bosqichlarni kuzatish</a>
+      ::selection {
+        background: var(--gold-soft);
+        color: #26210c;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-nav">
+      <div class="nav-inner">
+        <div class="brand">
+          <span class="seal-mini"></span> Ijtimoiy himoya · PF‑82
+        </div>
+        <nav class="links" id="navLinks">
+          <a href="#nima-uchun">Nima uchun</a>
+          <a href="#agentlik">Agentlik</a>
+          <a href="#yonalishlar">Yoʻnalishlar</a>
+          <a href="#bosqichlar">Bosqichlar</a>
+          <a href="#raqamli">Raqamli tizim</a>
+          <a href="#jamgarma">Jamgʻarma</a>
+          <a href="#tuzilma">Tuzilma</a>
+          <a href="#qollab">PQ‑176 tafsilotlari</a>
+        </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Menyu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-      <div class="hero-chips">
-        <span class="chip"><b>1 789</b> boshqaruv xodimi</span>
-        <span class="chip"><b>4 198</b> shtat birligi</span>
-        <span class="chip"><b>7</b> ustuvor yoʻnalish</span>
-        <span class="chip"><b>2023–2025</b> islohot bosqichlari</span>
-      </div>
-      <p style="margin-top:22px; font-size:12.8px; color:#a9c2ba; font-family:var(--mono);">
-        <span style="color:var(--gold-soft);">PF‑82</span> — nima uchun va nimani islohot qilish kerakligini belgilaydi ·
-        <span style="color:#9fd8c9;">PQ‑176</span> — Agentlikni qanday tashkil etish, tuzilmasi va shtatlarini belgilaydi.
-        Ushbu sahifada ikkalasi ham birlashtirilgan.
-      </p>
-    </div>
-    <div class="seal-wrap">
-      <div class="seal">
-        <svg viewBox="0 0 200 200"><path id="circlePath" fill="none" d="M 100,100 m -80,0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0"/>
-          <text font-family="IBM Plex Mono" font-size="9.3" fill="#e7c98a" letter-spacing="2">
-            <textPath href="#circlePath">• IJTIMOIY HIMOYA MILLIY AGENTLIGI • OʻZBEKISTON RESPUBLIKASI PREZIDENTI HUZURIDA </textPath>
-          </text>
-        </svg>
-        <div class="core"><strong>2023</strong><span>PF‑82</span></div>
-      </div>
-    </div>
-  </div>
-</section>
+    </header>
 
-<section id="nima-uchun">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="src-tag pf">📄 PF‑82 farmoni</span><br>
-      <span class="eyebrow">Islohot sababi</span>
-      <h2>Nega yagona tizim kerak boʻldi</h2>
-      <p>Farmon debochasida keltirilgan asosiy koʻrsatkichlar — soʻnggi yillarda ijtimoiy himoya koʻlami sezilarli kengaygan, biroq vazifalar bir necha vazirlik oʻrtasida boʻlinib qolgan.</p>
+    <div
+      style="
+        background: #fbfaf5;
+        border-bottom: 1px solid var(--line);
+        padding: 8px 0;
+      "
+    >
+      <div
+        class="wrap"
+        style="
+          display: flex;
+          gap: 18px;
+          flex-wrap: wrap;
+          align-items: center;
+          font-family: var(--mono);
+          font-size: 11.5px;
+          color: var(--ink-soft);
+        "
+      >
+        <span>Manba belgilari:</span>
+        <span class="src-tag pf" style="margin: 0">📄 PF‑82 farmoni</span>
+        <span class="src-tag pq" style="margin: 0">📄 PQ‑176 qarori</span>
+        <span class="src-tag both" style="margin: 0">📄 Ikkalasi birga</span>
+      </div>
     </div>
-    <div class="stat-grid">
-      <div class="stat-card reveal"><div class="num" data-target="2" data-suffix="×">0×</div><div class="lbl">Ijtimoiy dasturlar moliyalashtirilishi YIMga nisbatan oshgan</div></div>
-      <div class="stat-card reveal"><div class="num" data-target="5" data-suffix="×">0×</div><div class="lbl">Kam taʼminlangan nafaqa oluvchi oilalar qamrovi kengaygan</div></div>
-      <div class="stat-card reveal"><div class="num" data-target="1" data-suffix="">0</div><div class="lbl">Yagona Milliy agentlik — ilgari bir necha vazirlikka boʻlingan vazifalar birlashtirildi</div></div>
-      <div class="stat-card reveal"><div class="num" data-target="102" data-suffix="">0</div><div class="lbl">Ijtimoiy inspeksiya xodimlarining belgilangan soni</div></div>
-    </div>
-  </div>
-</section>
 
-<section id="agentlik">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="src-tag both">📄 PF‑82 + PQ‑176</span><br>
-      <span class="eyebrow">Yangi tuzilma</span>
-      <h2>Prezident huzuridagi Ijtimoiy himoya milliy agentligi</h2>
-      <p>Agentlik ijtimoiy himoya sohasidagi yagona vakolatli davlat organi sifatida tashkil etildi va boshqa davlat organlaridan mustaqil ravishda faoliyat yuritadi.</p>
-    </div>
-    <div class="agency-band reveal">
-      <div>
-        <span class="src-tag pf" style="margin-bottom:8px;">PF‑82, band 2, 5</span>
-        <h3>Har bir xonadongacha yetib boradigan xizmat</h3>
-        <p>Agentlikning tuman va shahar darajasidagi <b>“Inson” ijtimoiy xizmatlar markazlari</b> orqali har bir honadon ahvoli oʻrganiladi, oilaning haqiqiy ehtiyoji aniqlanadi va unga <b>ijtimoiy pasport</b> shakllantiriladi.</p>
-        <p>Ijtimoiy xodimlar guruhlari keys-menejment usulidan foydalangan holda buyurtmalarni qabul qiladi va oʻz vaqtida tegishli vazirlik hamda idoralarga yoʻnaltiradi.</p>
-        <div class="mini-stats">
-          <div class="mini-stat"><div class="n">1 789</div><div class="l">Agentlik markaziy va hududiy boshqaruv xodimlari <em style="font-style:normal;color:#0d5c50;">— PQ‑176</em></div></div>
-          <div class="mini-stat"><div class="n">4 198</div><div class="l">Vazirliklardan oʻtkaziladigan jami shtat birligi <em style="font-style:normal;color:#0d5c50;">— PQ‑176</em></div></div>
-          <div class="mini-stat"><div class="n">1×/hafta</div><div class="l">“Mehr va saxovat kuni” — har juma <em style="font-style:normal;color:#7a5b1e;">— PF‑82</em></div></div>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow"
+            >PF‑82 farmoni · PQ‑176 qarori — 2023‑yil 1‑iyun</span
+          >
+          <h1>Ijtimoiy himoyaning yangi arxitekturasi</h1>
+          <p class="lead">
+            Prezident farmoni va qarori asosida tashkil etilgan yagona Milliy
+            agentlik ijtimoiy yordamni har bir xonadon eshigigacha olib boradi —
+            mahalladan tortib davlat darajasigacha bitta tizimda.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#yonalishlar"
+              >7 ta yoʻnalishni koʻrish</a
+            >
+            <a class="btn btn-ghost" href="#bosqichlar"
+              >Bosqichlarni kuzatish</a
+            >
+          </div>
+          <div class="hero-chips">
+            <span class="chip"><b>1 789</b> boshqaruv xodimi</span>
+            <span class="chip"><b>4 198</b> shtat birligi</span>
+            <span class="chip"><b>7</b> ustuvor yoʻnalish</span>
+            <span class="chip"><b>2023–2025</b> islohot bosqichlari</span>
+          </div>
+          <p
+            style="
+              margin-top: 22px;
+              font-size: 12.8px;
+              color: #a9c2ba;
+              font-family: var(--mono);
+            "
+          >
+            <span style="color: var(--gold-soft)">PF‑82</span> — nima uchun va
+            nimani islohot qilish kerakligini belgilaydi ·
+            <span style="color: #9fd8c9">PQ‑176</span> — Agentlikni qanday
+            tashkil etish, tuzilmasi va shtatlarini belgilaydi. Ushbu sahifada
+            ikkalasi ham birlashtirilgan.
+          </p>
+        </div>
+        <div class="seal-wrap">
+          <div class="seal">
+            <svg viewBox="0 0 200 200">
+              <path
+                id="circlePath"
+                fill="none"
+                d="M 100,100 m -80,0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0"
+              />
+              <text
+                font-family="IBM Plex Mono"
+                font-size="9.3"
+                fill="#e7c98a"
+                letter-spacing="2"
+              >
+                <textPath href="#circlePath">
+                  • IJTIMOIY HIMOYA MILLIY AGENTLIGI • OʻZBEKISTON RESPUBLIKASI
+                  PREZIDENTI HUZURIDA
+                </textPath>
+              </text>
+            </svg>
+            <div class="core"><strong>2023</strong><span>PF‑82</span></div>
+          </div>
         </div>
       </div>
-      <div class="insan-card">
-        <span class="src-tag pf" style="margin-bottom:8px;">PF‑82, band 5</span>
-        <h4>“Inson” markazining asosiy vazifalari</h4>
-        <ul>
-          <li>Har bir honadon ahvolini oʻrganib, ijtimoiy hizmatga eʼtiyojni aniqlash</li>
-          <li>Oilalarning iqtisodiy-ijtimoiy holati boʻyicha ijtimoiy pasport shakllantirish</li>
-          <li>Ehtiyojmand aholi bilan keys-menejment asosida ishlash</li>
-          <li>Ogʻir ahvolga tushish havfi yuqori oilalarni muntazam monitoring qilish</li>
-        </ul>
+    </section>
+
+    <section id="nima-uchun">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="src-tag pf">📄 PF‑82 farmoni</span><br />
+          <span class="eyebrow">Islohot sababi</span>
+          <h2>Nega yagona tizim kerak boʻldi</h2>
+          <p>
+            Farmonda keltirilgan asosiy koʻrsatkichlar — soʻnggi yillarda
+            ijtimoiy himoya koʻlami sezilarli kengaygan, biroq vazifalar bir
+            necha vazirlik oʻrtasida boʻlinib qolgan.
+          </p>
+        </div>
+        <div class="stat-grid">
+          <div class="stat-card reveal">
+            <div class="num" data-target="2" data-suffix="×">0×</div>
+            <div class="lbl">
+              Ijtimoiy dasturlar moliyalashtirilishi YIMga nisbatan oshgan
+            </div>
+          </div>
+          <div class="stat-card reveal">
+            <div class="num" data-target="5" data-suffix="×">0×</div>
+            <div class="lbl">
+              Kam taʼminlangan nafaqa oluvchi oilalar qamrovi kengaygan
+            </div>
+          </div>
+          <div class="stat-card reveal">
+            <div class="num" data-target="1" data-suffix="">0</div>
+            <div class="lbl">
+              Yagona Milliy agentlik — ilgari bir necha vazirlikka boʻlingan
+              vazifalar birlashtirildi
+            </div>
+          </div>
+          <div class="stat-card reveal">
+            <div class="num" data-target="102" data-suffix="">0</div>
+            <div class="lbl">
+              Ijtimoiy inspeksiya xodimlarining belgilangan soni
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section id="yonalishlar">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="src-tag pf">📄 PF‑82, 1‑ilova</span><br>
-      <span class="eyebrow">1‑ilova · faoliyat yoʻnalishlari</span>
-      <h2>Agentlikning 7 ta ustuvor yoʻnalishi</h2>
-      <p>Chapdagi roʻyxatdan har bir yoʻnalishni bosing — oʻng tomonda uning asosiy vazifalari ochiladi.</p>
-    </div>
-    <div class="dir-layout reveal">
-      <div class="dir-list" id="dirList"></div>
-      <div class="dir-panel" id="dirPanel"></div>
-    </div>
-  </div>
-</section>
-
-<section id="bosqichlar">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="src-tag both">📄 PF‑82, band 4 + PQ‑176, 3‑ilova</span><br>
-      <span class="eyebrow">Vazifalarni oʻtkazish jadvali</span>
-      <h2>Islohot toʻrt bosqichda amalga oshadi</h2>
-      <p>2023–2025 yillar davomida turli vazirlik va idoralarning ijtimoiy hizmat vazifalari bosqichma-bosqich Agentlik tuzilmasiga oʻtkaziladi. Sanani bosing. <span style="color:#7a5b1e;">Sana va tashkilotlar roʻyxati — PF‑82</span>, <span style="color:#0d5c50;">shtat birliklari soni — PQ‑176</span>.</p>
-    </div>
-    <div class="timeline" id="timeline"></div>
-  </div>
-</section>
-
-<section id="raqamli">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="src-tag pf">📄 PF‑82, band 12</span><br>
-      <span class="eyebrow">Raqamlashtirish</span>
-      <h2>Yagona raqamli ijtimoiy himoya tizimi</h2>
-      <p>Barcha arizalar, hisobotlar va reestrlar bitta axborot tizimida birlashtiriladi hamda haqiqiy vaqt rejimida yangilanadi.</p>
-    </div>
-    <div class="digi-grid">
-      <div class="digi-card reveal"><div class="icon">AT</div><h4>“Yagona milliy ijtimoiy himoya” tizimi</h4><p>2023‑yil 1‑oktabrdan ishga tushiriladi; barcha turdagi ijtimoiy hizmat va yordam boʻyicha arizalar shu tizim orqali qabul qilinadi.</p></div>
-      <div class="digi-card reveal"><div class="icon">ID</div><h4>Ijtimoiy pasport</h4><p>Elektron maʼlumotlar bazalari asosida har bir fuqaroning iqtisodiy-ijtimoiy holati, ehtiyojlari va imkoniyatlarini aks ettiruvchi hujjat joriy etiladi.</p></div>
-      <div class="digi-card reveal"><div class="icon">04</div><h4>To‘rt daftar</h4><p>2024‑yil 1‑yanvardan “Mehr”, “Saxovat va koʻmak”, “Yoshlar” va “Ayollar” daftarlari orqali koʻrsatilgan yordamlar yagona tizimga qamrab olinadi.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="jamgarma">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="src-tag pf">📄 PF‑82, 4‑ilova</span><br>
-      <span class="eyebrow">4‑ilova · davlat jamgʻarmasi</span>
-      <h2>Ijtimoiy himoya davlat jamgʻarmasi harajatlari</h2>
-      <p>Jamgʻarma mablagʻlari yoʻnalishlari ham bosqichma-bosqich kengaytiriladi. Bosqichni tanlang.</p>
-    </div>
-    <div class="fund-filters" id="fundFilters"></div>
-    <div class="fund-grid" id="fundGrid"></div>
-  </div>
-</section>
-
-<section id="tuzilma">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="src-tag pq">📄 PQ‑176, 1‑ va 2‑ilova</span><br>
-      <span class="eyebrow">Tashkiliy tuzilma</span>
-      <h2>Agentlik qanday tashkil etilgan</h2>
-      <p>Soddalashtirilgan sxema — har bir boʻlimni bosib, uning vazifasi bilan tanishing.</p>
-    </div>
-    <div class="org-tree reveal">
-      <div class="org-root">Ijtimoiy himoya milliy agentligi</div>
-      <div class="org-connector"></div>
-      <div class="org-branches" id="orgBranches"></div>
-    </div>
-  </div>
-</section>
-
-<section id="qollab">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="src-tag pq">📄 Faqat PQ‑176’da bor</span><br>
-      <span class="eyebrow">Qaror bilan qoʻshilgan tafsilotlar</span>
-      <h2>PQ‑176 qarorining oʻziga xos qismlari</h2>
-      <p>Bular PF‑82 farmonida yoʻq, balki uni ijro etish uchun qabul qilingan PQ‑176 qarorida belgilangan amaliy tafsilotlar.</p>
-    </div>
-    <div class="digi-grid">
-      <div class="digi-card reveal">
-        <div class="icon" style="background:var(--gold);color:#25200b;">$</div>
-        <h4>Qoʻllab‑quvvatlash jamgʻarmasi</h4>
-        <p>Davlat jamgʻarmasidan alohida — Agentlik huzurida yuridik shaxs maqomiga ega boʻlmagan jamgʻarma tashkil etiladi. Manbalari: davlat jamgʻarmasi tushumining 10%igacha, xalqaro grant va imtiyozli kreditlar, ijtimoiy inspeksiya jarimalari, depozit daromadlari.</p>
+    <section id="agentlik">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="src-tag both">📄 PF‑82 + PQ‑176</span><br />
+          <span class="eyebrow">Yangi tuzilma</span>
+          <h2>Prezident huzuridagi Ijtimoiy himoya milliy agentligi</h2>
+          <p>
+            Agentlik ijtimoiy himoya sohasidagi yagona vakolatli davlat organi
+            sifatida tashkil etildi va boshqa davlat organlaridan mustaqil
+            ravishda faoliyat yuritadi.
+          </p>
+        </div>
+        <div class="agency-band reveal">
+          <div>
+            <span class="src-tag pf" style="margin-bottom: 8px"
+              >PF‑82, band 2, 5</span
+            >
+            <h3>Har bir xonadongacha yetib boradigan xizmat</h3>
+            <p>
+              Agentlikning tuman va shahar darajasidagi
+              <b>“Inson” ijtimoiy xizmatlar markazlari</b> orqali har bir
+              honadon ahvoli oʻrganiladi, oilaning haqiqiy ehtiyoji aniqlanadi
+              va unga <b>ijtimoiy pasport</b> shakllantiriladi.
+            </p>
+            <p>
+              Ijtimoiy xodimlar har bir oila yoki fuqaroning holatini alohida
+              holat sifatida ko'rib chiqadi, va oʻz vaqtida tegishli vazirlik
+              hamda idoralarga yoʻnaltiradi.
+            </p>
+            <div class="mini-stats">
+              <div class="mini-stat">
+                <div class="n">1 789</div>
+                <div class="l">
+                  Agentlik markaziy va hududiy boshqaruv xodimlari
+                  <em style="font-style: normal; color: #0d5c50">— PQ‑176</em>
+                </div>
+              </div>
+              <div class="mini-stat">
+                <div class="n">4 198</div>
+                <div class="l">
+                  Vazirliklardan oʻtkaziladigan jami shtat birligi
+                  <em style="font-style: normal; color: #0d5c50">— PQ‑176</em>
+                </div>
+              </div>
+              <div class="mini-stat">
+                <div class="n">1×/hafta</div>
+                <div class="l">
+                  “Mehr va saxovat kuni” — har juma
+                  <em style="font-style: normal; color: #7a5b1e">— PF‑82</em>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="insan-card">
+            <span class="src-tag pf" style="margin-bottom: 8px"
+              >PF‑82, band 5</span
+            >
+            <h4>“Inson” markazining asosiy vazifalari</h4>
+            <ul>
+              <li>
+                Har bir honadon ahvolini oʻrganib, ijtimoiy hizmatga eʼtiyojni
+                aniqlash
+              </li>
+              <li>
+                Oilalarning iqtisodiy-ijtimoiy holati boʻyicha ijtimoiy pasport
+                shakllantirish
+              </li>
+              <li>
+                Ehtiyojmand aholi bilan individual yondashuv asosida ishlash
+              </li>
+              <li>
+                Ogʻir ahvolga tushish havfi yuqori oilalarni muntazam monitoring
+                qilish
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="digi-card reveal">
-        <div class="icon" style="background:var(--sky);">🌍</div>
-        <h4>Xorijiy mutaxassislar</h4>
-        <p>Konsalting tashkilotlari va malakali xorijiy mutaxassislarni shartnoma asosida jalb qilish, ularga milliy yoki chet el valyutasida ish haqi toʻlash imkoniyati nazarda tutilgan.</p>
+    </section>
+
+    <section id="yonalishlar">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="src-tag pf">📄 PF‑82, 1‑ilova</span><br />
+          <span class="eyebrow">1‑ilova · faoliyat yoʻnalishlari</span>
+          <h2>Agentlikning 7 ta ustuvor yoʻnalishi</h2>
+          <p>
+            Chapdagi roʻyxatdan har bir yoʻnalishni bosing — oʻng tomonda uning
+            asosiy vazifalari ochiladi.
+          </p>
+        </div>
+        <div class="dir-layout reveal">
+          <div class="dir-list" id="dirList"></div>
+          <div class="dir-panel" id="dirPanel"></div>
+        </div>
       </div>
-      <div class="digi-card reveal">
-        <div class="icon" style="background:#b44b3c;">★</div>
-        <h4>“Ijtimoiy himoya fidoyisi” nishoni</h4>
-        <p>Sohaga munosib hissa qoʻshgan fuqarolar, davlat va jamoat tashkilotlari xodimlari hamda tadbirkorlarni rag‘batlantirish uchun idoraviy koʻkrak nishoni taʼsis etilgan.</p>
+    </section>
+
+    <section id="bosqichlar">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="src-tag both">📄 PF‑82, band 4 + PQ‑176, 3‑ilova</span
+          ><br />
+          <span class="eyebrow">Vazifalarni oʻtkazish jadvali</span>
+          <h2>Islohot toʻrt bosqichda amalga oshadi</h2>
+          <p>
+            2023–2025 yillar davomida turli vazirlik va idoralarning ijtimoiy
+            hizmat vazifalari bosqichma-bosqich Agentlik tuzilmasiga
+            oʻtkaziladi. Sanani bosing.
+            <span style="color: #7a5b1e"
+              >Sana va tashkilotlar roʻyxati — PF‑82</span
+            >,
+            <span style="color: #0d5c50">shtat birliklari soni — PQ‑176</span>.
+          </p>
+        </div>
+        <div class="timeline" id="timeline"></div>
       </div>
-      <div class="digi-card reveal">
-        <div class="icon">🏢</div>
-        <h4>Agentlikka berilgan binolar</h4>
-        <p>Toshkent shahridagi uchta bino (Amir Temur koʻchasi, Nurxon koʻchasi, Yangizamon koʻchasi manzillari) operativ boshqaruv huquqi asosida Agentlikka oʻtkazilgan.</p>
+    </section>
+
+    <section id="raqamli">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="src-tag pf">📄 PF‑82, band 12</span><br />
+          <span class="eyebrow">Raqamlashtirish</span>
+          <h2>Yagona raqamli ijtimoiy himoya tizimi</h2>
+          <p>
+            Barcha arizalar, hisobotlar va reestrlar bitta axborot tizimida
+            birlashtiriladi hamda haqiqiy vaqt rejimida yangilanadi.
+          </p>
+        </div>
+        <div class="digi-grid">
+          <div class="digi-card reveal">
+            <div class="icon">AT</div>
+            <h4>“Yagona milliy ijtimoiy himoya” tizimi</h4>
+            <p>
+              2023‑yil 1‑oktabrdan ishga tushiriladi; barcha turdagi ijtimoiy
+              hizmat va yordam boʻyicha arizalar shu tizim orqali qabul
+              qilinadi.
+            </p>
+          </div>
+          <div class="digi-card reveal">
+            <div class="icon">ID</div>
+            <h4>Ijtimoiy pasport</h4>
+            <p>
+              Elektron maʼlumotlar bazalari asosida har bir fuqaroning
+              iqtisodiy-ijtimoiy holati, ehtiyojlari va imkoniyatlarini aks
+              ettiruvchi hujjat joriy etiladi.
+            </p>
+          </div>
+          <div class="digi-card reveal">
+            <div class="icon">04</div>
+            <h4>To‘rt daftar</h4>
+            <p>
+              2024‑yil 1‑yanvardan “Mehr”, “Saxovat va koʻmak”, “Yoshlar” va
+              “Ayollar” daftarlari orqali koʻrsatilgan yordamlar yagona tizimga
+              qamrab olinadi.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="digi-card reveal">
-        <div class="icon">👥</div>
-        <h4>Rahbariyat va maosh</h4>
-        <p>Direktor 4 nafar oʻrinbosarga ega (shundan 1 nafari birinchi oʻrinbosar); markaziy apparat xodimlariga Prezident Administratsiyasi ijro etuvchi apparati xodimlari uchun belgilangan maosh shartlari tatbiq etiladi.</p>
+    </section>
+
+    <section id="jamgarma">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="src-tag pf">📄 PF‑82, 4‑ilova</span><br />
+          <span class="eyebrow">4‑ilova · davlat jamgʻarmasi</span>
+          <h2>Ijtimoiy himoya davlat jamgʻarmasi harajatlari</h2>
+          <p>
+            Jamgʻarma mablagʻlari yoʻnalishlari ham bosqichma-bosqich
+            kengaytiriladi. Bosqichni tanlang.
+          </p>
+        </div>
+        <div class="fund-filters" id="fundFilters"></div>
+        <div class="fund-grid" id="fundGrid"></div>
       </div>
-      <div class="digi-card reveal">
-        <div class="icon">🔟</div>
-        <h4>Hududiy boshqarmalar maoshi</h4>
-        <p>Viloyat boshqarmalari — markaziy apparat stavkasining 60%i, tuman “Inson” markazlari xodimlari — 50%i miqdorida meʼyorlashtiriladi.</p>
+    </section>
+
+    <section id="tuzilma">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="src-tag pq">📄 PQ‑176, 1‑ va 2‑ilova</span><br />
+          <span class="eyebrow">Tashkiliy tuzilma</span>
+          <h2>Agentlik qanday tashkil etilgan</h2>
+          <p>
+            Soddalashtirilgan sxema — har bir boʻlimni bosib, uning vazifasi
+            bilan tanishing.
+          </p>
+        </div>
+        <div class="org-tree reveal">
+          <div class="org-root">Ijtimoiy himoya milliy agentligi</div>
+          <div class="org-connector"></div>
+          <div class="org-branches" id="orgBranches"></div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<footer>
-  <div class="wrap foot-grid">
-    <div>
-      <h5>Ijtimoiy himoya islohoti</h5>
-      <p>Ushbu sahifa Oʻzbekiston Respublikasi Prezidentining 2023‑yil 1‑iyundagi PF‑82-son Farmoni va PQ‑176-son Qarori asosidagi maʼlumotlarning qisqacha, interaktiv koʻrinishidagi taqdimotidir — rasmiy hujjat oʻrnini bosmaydi.</p>
-      <p class="src">Nazorat: OʻzR Prezidenti Administratsiyasi rahbari S.U. Umurzakov<br>Manba: PF‑82 (1.06.2023), PQ‑176 (1.06.2023)</p>
-    </div>
-    <a class="back-top" href="#">↑ Yuqoriga</a>
-  </div>
-</footer>
+    <section id="qollab">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="src-tag pq">📄 Faqat PQ‑176’da bor</span><br />
+          <span class="eyebrow">Qaror bilan qoʻshilgan tafsilotlar</span>
+          <h2>PQ‑176 qarorining oʻziga xos qismlari</h2>
+          <p>
+            Bular PF‑82 farmonida yoʻq, balki uni ijro etish uchun qabul
+            qilingan PQ‑176 qarorida belgilangan amaliy tafsilotlar.
+          </p>
+        </div>
+        <div class="digi-grid">
+          <div class="digi-card reveal">
+            <div class="icon" style="background: var(--gold); color: #25200b">
+              $
+            </div>
+            <h4>Qoʻllab‑quvvatlash jamgʻarmasi</h4>
+            <p>
+              Davlat jamgʻarmasidan alohida — Agentlik huzurida yuridik shaxs
+              maqomiga ega boʻlmagan jamgʻarma tashkil etiladi. Manbalari:
+              davlat jamgʻarmasi tushumining 10%igacha, xalqaro grant va
+              imtiyozli kreditlar, ijtimoiy inspeksiya jarimalari, depozit
+              daromadlari.
+            </p>
+          </div>
+          <div class="digi-card reveal">
+            <div class="icon" style="background: var(--sky)">🌍</div>
+            <h4>Xorijiy mutaxassislar</h4>
+            <p>
+              Konsalting tashkilotlari va malakali xorijiy mutaxassislarni
+              shartnoma asosida jalb qilish, ularga milliy yoki chet el
+              valyutasida ish haqi toʻlash imkoniyati nazarda tutilgan.
+            </p>
+          </div>
+          <div class="digi-card reveal">
+            <div class="icon" style="background: #b44b3c">★</div>
+            <h4>“Ijtimoiy himoya fidoyisi” nishoni</h4>
+            <p>
+              Sohaga munosib hissa qoʻshgan fuqarolar, davlat va jamoat
+              tashkilotlari xodimlari hamda tadbirkorlarni rag‘batlantirish
+              uchun idoraviy koʻkrak nishoni taʼsis etilgan.
+            </p>
+          </div>
+          <div class="digi-card reveal">
+            <div class="icon">🏢</div>
+            <h4>Agentlikka berilgan binolar</h4>
+            <p>
+              Toshkent shahridagi uchta bino (Amir Temur koʻchasi, Nurxon
+              koʻchasi, Yangizamon koʻchasi manzillari) operativ boshqaruv
+              huquqi asosida Agentlikka oʻtkazilgan.
+            </p>
+          </div>
+          <div class="digi-card reveal">
+            <div class="icon">👥</div>
+            <h4>Rahbariyat va maosh</h4>
+            <p>
+              Direktor 4 nafar oʻrinbosarga ega (shundan 1 nafari birinchi
+              oʻrinbosar); markaziy apparat xodimlariga Prezident
+              Administratsiyasi ijro etuvchi apparati xodimlari uchun
+              belgilangan maosh shartlari tatbiq etiladi.
+            </p>
+          </div>
+          <div class="digi-card reveal">
+            <div class="icon">🔟</div>
+            <h4>Hududiy boshqarmalar maoshi</h4>
+            <p>
+              Viloyat boshqarmalari — markaziy apparat stavkasining 60%i, tuman
+              “Inson” markazlari xodimlari — 50%i miqdorida meʼyorlashtiriladi.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<script>
-/* ---------- DATA ---------- */
-const directions = [
-  {roman:"I", title:"Davlat siyosati va muvofiqlashtirish", tag:"Yagona strategiya", items:[
-    "Ijtimoiy himoya sohasida yagona davlat siyosatini ishlab chiqish va amalga oshirish",
-    "Kafolatlangan ijtimoiy hizmat standartlarini yaratish va ularning ijrosini monitoring qilish",
-    "Aholining turli guruhlari bilan ishlaydigan professional “ijtimoiy ish” hizmatini tashkil etish",
-    "Nodavlat sektor va mahalliy hamjamiyatlarni hizmat koʻrsatishga faol jalb qilish",
-    "Sohani raqamlashtirish orqali shaffoflikni taʼminlash"
-  ]},
-  {roman:"II", title:"Nogironligi boʻlgan shaxslar", tag:"Tibbiydan ijtimoiy modelga", items:[
-    "Nogironlikni baholashning tibbiy modelidan ijtimoiy modelga bosqichma-bosqich oʻtish",
-    "Yuqori sifatli protez-ortopediya mahsulotlari va reabilitatsiya texnik vositalari bilan taʼminlash",
-    "Reabilitatsiya va abilitatsiya sohasiga zamonaviy texnologiyalarni joriy qilish",
-    "Bandlikka koʻmaklashish va jamiyatga inklyuziyani taʼminlash",
-    "Jamiyat ongida nogironlarga nisbatan sogʻlom fikrni shakllantirish"
-  ]},
-  {roman:"III", title:"Voyaga yetmagan bolalarni himoya qilish", tag:"Bolalar huquqi", items:[
-    "Bolalarga nisbatan zoʻravonlikning oldini olish dasturlarini ishlab chiqish",
-    "Vasiylik va homiylik tizimini takomillashtirish, oilaga asoslangan parvarish shakllarini rivojlantirish",
-    "Farzand asrab olish tizimini takomillashtirish",
-    "Ijtimoiy himoyaga muhtoj bolalar huquqlari va manfaatlarini himoya qilish",
-    "Muhtoj bolalarni davolashni tashkil qilish tizimini takomillashtirish"
-  ]},
-  {roman:"IV", title:"Ayollarni himoya qilish", tag:"Zoʻravonlikka qarshi", items:[
-    "Zoʻravonlik va jinsiy zoʻravonlik taʼqibidan himoya qilishda professional yordam koʻrsatish",
-    "Zoʻravonlikdan aziyat chekkan ayollarni qoʻllab-quvvatlash",
-    "Boshpana (shelter) va reabilitatsiya markazlari ishini tashkil qilish"
-  ]},
-  {roman:"V", title:"Ogʻir hayotiy vaziyatdagi oilalar", tag:"Oilaga koʻmak", items:[
-    "Bolalarni oiladan ajratishning oldini olish, ota-onalarning koʻnikmalarini rivojlantirish",
-    "Ogʻir vaziyatdagi homilador ayollar, yolgʻiz ota-onalar va yosh bolali oilalarni qoʻllab-quvvatlash",
-    "Ogʻir vaziyatdagi oilalar farzandlari uchun ijtimoiy hizmatlarni rivojlantirish",
-    "Palliativ yordamni tashkil qilish"
-  ]},
-  {roman:"VI", title:"Yoshlar bilan ishlash", tag:"Kasbga yoʻnaltirish", items:[
-    "Psixosotsial hizmat koʻrsatish tizimini tashkil qilish",
-    "Alohida taʼlim ehtiyoji boʻlgan bolalar uchun ihtisoslashtirilgan taʼlim bitiruvchilarini psihologik saloamatlik, koʻnikma va kasbga yoʻnaltirish"
-  ]},
-  {roman:"VII", title:"Yakka, yolgʻiz, keksalar va ijtimoiy taʼminot", tag:"Sugʻurta va parvarish", items:[
-    "Uyda parvarish qilish va qoʻllab-quvvatlash hizmatlarini tashkil qilish",
-    "Qariyalar uylari negizida professional hizmat koʻrsatish tizimini tashkil qilish",
-    "Zoʻravonlikdan himoya qilish",
-    "Ijtimoiy sugʻurta tizimida yagona davlat siyosatini yuritish va aholini sugʻurtaga jalb qilish mexanizmlarini ishlab chiqish"
-  ]},
-];
+    <footer>
+      <div class="wrap foot-grid">
+        <div>
+          <h5>Ijtimoiy himoya islohoti</h5>
+          <p>
+            Ushbu sahifa Oʻzbekiston Respublikasi Prezidentining 2023‑yil
+            1‑iyundagi PF‑82-son Farmoni va PQ‑176-son Qarori asosidagi
+            maʼlumotlarning qisqacha, interaktiv koʻrinishidagi taqdimotidir —
+            rasmiy hujjat oʻrnini bosmaydi.
+          </p>
+          <p class="src">
+            Nazorat: OʻzR Prezidenti Administratsiyasi rahbari S.U. Umurzakov<br />Manba:
+            PF‑82 (1.06.2023), PQ‑176 (1.06.2023)
+          </p>
+        </div>
+        <a class="back-top" href="#">↑ Yuqoriga</a>
+      </div>
+    </footer>
 
-const timelineData = [
-  {date:"2023‑yil 15‑iyun", title:"Birinchi toʻlqin — Kambagʻallikni qisqartirish va bandlik vazirligidan", tag:"984 shtat birligi",
-    items:["Tibbiy-ijtimoiy ekspertiza inspeksiyasi va hududiy boʻlinmalari","Nogironlarni reabilitatsiya va protezlash milliy markazi","Ayollarni reabilitatsiya va moslashtirish respublika markazi","Odam savdosi jabrdiydalariga yordam markazi","“Muruvvat” va “Saxovat” interlan-uylari","Fahriylar uchun respublika pansionati va sanatoriylari"]},
-  {date:"2024‑yil 1‑yanvar", title:"Ikkinchi toʻlqin — Sogʻliqni saqlash, taʼlim va mahalliy hokimiyatdan", tag:"707+430 shtat birligi",
-    items:["Bolalar uylari (Sogʻliqni saqlash vazirligi)","Mehribonlik uylari (Maktabgacha va maktab taʼlimi vazirligi)","Voyaga yetmaganlar bilan ishlash sektorlari (mahalliy hokimiyat)","Oilaviy bolalar uylari"]},
-  {date:"2024‑yil 1‑avgust", title:"Uchinchi toʻlqin — Ixtisoslashtirilgan taʼlim tizimidan", tag:"222 shtat birligi",
-    items:["Alohida taʼlim ehtiyoji boʻlgan bolalar uchun ixtisoslashtirilgan maktab va internatlar","Koʻp tarmoqli ixtisoslashtirilgan maktabgacha taʼlim tashkilotlari","Imkoniyatlari cheklangan shahslar uchun ixtisoslashtirilgan kasb-hunar maktablari"]},
-  {date:"2025‑yil 1‑yanvar", title:"Toʻrtinchi toʻlqin — Ichki ishlar va moliya tizimidan", tag:"33 shtat birligi",
-    items:["Muayyan yashash joyiga ega boʻlmagan shahslarni reabilitatsiya markazlari (IIV)","Ijtimoiy sugʻurta jamgʻarmasi (Iqtisodiyot va moliya vazirligi)"]},
-];
+    <script>
+      /* ---------- DATA ---------- */
+      const directions = [
+        {
+          roman: "I",
+          title: "Davlat siyosati va muvofiqlashtirish",
+          tag: "Yagona strategiya",
+          items: [
+            "Ijtimoiy himoya sohasida yagona davlat siyosatini ishlab chiqish va amalga oshirish",
+            "Kafolatlangan ijtimoiy hizmat standartlarini yaratish va ularning ijrosini monitoring qilish",
+            "Aholining turli guruhlari bilan ishlaydigan professional “ijtimoiy ish” hizmatini tashkil etish",
+            "Nodavlat sektor va mahalliy hamjamiyatlarni hizmat koʻrsatishga faol jalb qilish",
+            "Sohani raqamlashtirish orqali shaffoflikni taʼminlash",
+          ],
+        },
+        {
+          roman: "II",
+          title: "Nogironligi boʻlgan shaxslar",
+          tag: "Tibbiydan ijtimoiy modelga",
+          items: [
+            "Nogironlikni baholashning tibbiy modelidan ijtimoiy modelga bosqichma-bosqich oʻtish",
+            "Yuqori sifatli protez-ortopediya mahsulotlari va reabilitatsiya texnik vositalari bilan taʼminlash",
+            "Reabilitatsiya va abilitatsiya sohasiga zamonaviy texnologiyalarni joriy qilish",
+            "Bandlikka koʻmaklashish va jamiyatga inklyuziyani taʼminlash",
+            "Jamiyat ongida nogironlarga nisbatan sogʻlom fikrni shakllantirish",
+          ],
+        },
+        {
+          roman: "III",
+          title: "Voyaga yetmagan bolalarni himoya qilish",
+          tag: "Bolalar huquqi",
+          items: [
+            "Bolalarga nisbatan zoʻravonlikning oldini olish dasturlarini ishlab chiqish",
+            "Vasiylik va homiylik tizimini takomillashtirish, oilaga asoslangan parvarish shakllarini rivojlantirish",
+            "Farzand asrab olish tizimini takomillashtirish",
+            "Ijtimoiy himoyaga muhtoj bolalar huquqlari va manfaatlarini himoya qilish",
+            "Muhtoj bolalarni davolashni tashkil qilish tizimini takomillashtirish",
+          ],
+        },
+        {
+          roman: "IV",
+          title: "Ayollarni himoya qilish",
+          tag: "Zoʻravonlikka qarshi",
+          items: [
+            "Zoʻravonlik va jinsiy zoʻravonlik taʼqibidan himoya qilishda professional yordam koʻrsatish",
+            "Zoʻravonlikdan aziyat chekkan ayollarni qoʻllab-quvvatlash",
+            "Boshpana va reabilitatsiya markazlari ishini tashkil qilish",
+          ],
+        },
+        {
+          roman: "V",
+          title: "Ogʻir hayotiy vaziyatdagi oilalar",
+          tag: "Oilaga koʻmak",
+          items: [
+            "Bolalarni oiladan ajratishning oldini olish, ota-onalarning koʻnikmalarini rivojlantirish",
+            "Ogʻir vaziyatdagi homilador ayollar, yolgʻiz ota-onalar va yosh bolali oilalarni qoʻllab-quvvatlash",
+            "Ogʻir vaziyatdagi oilalar farzandlari uchun ijtimoiy hizmatlarni rivojlantirish",
+            "Palliativ yordamni tashkil qilish",
+          ],
+        },
+        {
+          roman: "VI",
+          title: "Yoshlar bilan ishlash",
+          tag: "Kasbga yoʻnaltirish",
+          items: [
+            "Psixosotsial hizmat koʻrsatish tizimini tashkil qilish",
+            "Alohida taʼlim ehtiyoji boʻlgan bolalar uchun ixtisoslashtirilgan taʼlim bitiruvchilarini psixologik saloamatlik, koʻnikma va kasbga yoʻnaltirish",
+          ],
+        },
+        {
+          roman: "VII",
+          title: "Yakka, yolgʻiz, keksalar va ijtimoiy taʼminot",
+          tag: "Sugʻurta va parvarish",
+          items: [
+            "Uyda parvarish qilish va qoʻllab-quvvatlash hizmatlarini tashkil qilish",
+            "Qariyalar uylari negizida professional hizmat koʻrsatish tizimini tashkil qilish",
+            "Zoʻravonlikdan himoya qilish",
+            "Ijtimoiy sugʻurta tizimida yagona davlat siyosatini yuritish va aholini sugʻurtaga jalb qilish mexanizmlarini ishlab chiqish",
+          ],
+        },
+      ];
 
-const fundData = [
-  {phase:"2023", name:"Protez-ortopediya taʼminoti", desc:"Aholini protez-ortopediya buyumlari va reabilitatsiya texnik vositalari bilan taʼminlash"},
-  {phase:"2023", name:"“107” qisqa raqami", desc:"Tuni-kuni faoliyat koʻrsatadigan ijtimoiy yordam telefon hizmati"},
-  {phase:"2023", name:"“Ijtimoiy taxi”", desc:"Nogironligi boʻlgan va harakatlanish imkoniyati cheklangan shahslar uchun transport hizmati"},
-  {phase:"2023", name:"Ijtimoiy karta", desc:"Ijtimoiy hizmatlardan foydalanishni tezlashtiruvchi shaxsiy karta joriy etish"},
-  {phase:"2023", name:"Bandlik subsidiyasi", desc:"Nogironlarni ish bilan taʼminlovchi korxonalarni subsidiyalash"},
-  {phase:"2024-yan", name:"Nafaqa toʻlovlari", desc:"Yoshga doir, nogironlik va boquvchisini yoʻqotganlik nafaqalarini toʻlash"},
-  {phase:"2024-yan", name:"Suyunchi puli", desc:"Bola tugʻilishi munosabati bilan beriladigan bir martalik nafaqa"},
-  {phase:"2024-yan", name:"Dafn xarajatlari", desc:"Dafn marosimi harajatlarini qisman qoplash"},
-  {phase:"2024-yan", name:"Yetimlarga uy-joy", desc:"Etim va chin etim bolalarni uy-joy bilan taʼminlash"},
-  {phase:"2024-iyul", name:"Maktab-internat ovqatlanishi", desc:"Ixtisoslashtirilgan maktab-internatlarda oziqlanish harajatlarini qoplash"},
-  {phase:"2024-iyul", name:"“Ayollar daftari” yordami", desc:"Daftarga kiritilgan hotin-qizlarga moddiy yordam va yuridik hizmat"},
-  {phase:"2024-iyul", name:"Kiyim-kechak va oʻquv qurollari", desc:"Ijtimoiy himoyaga muhtoj oilalar farzandlarini taʼminlash"},
-  {phase:"2025-yan", name:"Homiladorlik nafaqasi", desc:"Ijtimoiy sugʻurta jamgʻarmasi hisobidan tugʻish nafaqalarini toʻlash"},
-  {phase:"2025-yan", name:"Palliativ yordam va shelterlar", desc:"Palliativ yordam koʻrsatish markazlari va shelterlar faoliyatini moliyalashtirish"},
-  {phase:"2025-yan", name:"Uysizlarni reabilitatsiya qilish", desc:"Doimiy yashash joyi boʻlmagan shahslar uchun ijtimoiy oshhonalar va markazlar"},
-];
+      const timelineData = [
+        {
+          date: "2023‑yil 15‑iyun",
+          title:
+            "Birinchi toʻlqin — Kambagʻallikni qisqartirish va bandlik vazirligidan",
+          tag: "",
+          items: [
+            "Tibbiy-ijtimoiy ekspertiza inspeksiyasi va hududiy boʻlinmalari",
+            "Nogironlarni reabilitatsiya va protezlash milliy markazi",
+            "Ayollarni reabilitatsiya va moslashtirish respublika markazi",
+            "Odam savdosi jabrdiydalariga yordam markazi",
+            "“Muruvvat” va “Saxovat” interlan-uylari",
+            "Fahriylar uchun respublika pansionati va sanatoriylari",
+          ],
+        },
+        {
+          date: "2024‑yil 1‑yanvar",
+          title:
+            "Ikkinchi toʻlqin — Sogʻliqni saqlash, taʼlim va mahalliy hokimiyatdan",
+          tag: "",
+          items: [
+            "Bolalar uylari (Sogʻliqni saqlash vazirligi)",
+            "Mehribonlik uylari (Maktabgacha va maktab taʼlimi vazirligi)",
+            "Voyaga yetmaganlar bilan ishlash sektorlari (mahalliy hokimiyat)",
+            "Oilaviy bolalar uylari",
+          ],
+        },
+        {
+          date: "2024‑yil 1‑avgust",
+          title: "Uchinchi toʻlqin — Ixtisoslashtirilgan taʼlim tizimidan",
+          tag: "",
+          items: [
+            "Alohida taʼlim ehtiyoji boʻlgan bolalar uchun ixtisoslashtirilgan maktab va internatlar",
+            "Koʻp tarmoqli ixtisoslashtirilgan maktabgacha taʼlim tashkilotlari",
+            "Imkoniyatlari cheklangan shahslar uchun ixtisoslashtirilgan kasb-hunar maktablari",
+          ],
+        },
+        {
+          date: "2025‑yil 1‑yanvar",
+          title: "Toʻrtinchi toʻlqin — Ichki ishlar va moliya tizimidan",
+          tag: "",
+          items: [
+            "Muayyan yashash joyiga ega boʻlmagan shahslarni reabilitatsiya markazlari (IIV)",
+            "Ijtimoiy sugʻurta jamgʻarmasi (Iqtisodiyot va moliya vazirligi)",
+          ],
+        },
+      ];
 
-const orgNodes = [
-  {t:"Ijtimoiy inspeksiya", d:"Markaziy apparat va Qoraqalpogʻiston, viloyatlar, Toshkent shahri boʻyicha hududiy boʻlinmalar — nazorat va monitoring funksiyasini bajaradi."},
-  {t:"“Inson” hizmat markazlari", d:"Tuman va shahar darajasida — ijtimoiy hodimlar guruhlari, ruhiy-ijtimoiy mobil yordam hizmati va oilaviy bolalar uylarini oʻz ichiga oladi."},
-  {t:"Reabilitatsiya va protezlash markazi", d:"Nogironligi boʻlgan shahslarni protez-ortopediya buyumlari bilan taʼminlash va hududiy markazlar orqali hizmat koʻrsatish."},
-  {t:"Ayollar va jabrdiydalarga yordam", d:"“Muruvvat”, “Saxovat” interlan-uylari va odam savdosi jabrdiydalariga yordam berish respublika markazi."},
-  {t:"Fahriylar pansionati", d:"Urush va mehnat fahriylari uchun respublika pansionati hamda sanatoriylari."},
-  {t:"Malaka oshirish markazi", d:"Ijtimoiy himoya tizimi hodimlarining malakasini oshirish markazi va Ijtimoiy himoyani rivojlantirish instituti."},
-  {t:"Davlat jamgʻarmasi", d:"Ijtimoiy himoya davlat jamgʻarmasi va unga qarashli “Mehribonlik” uylari faoliyatini moliyalashtiradi."},
-  {t:"Funksionallikni baholash", d:"Nogironligi boʻlgan shahslarning funksionalligini baholash boshqarmasi va hududiy boʻlimlari."},
-];
+      const fundData = [
+        {
+          phase: "2023",
+          name: "Protez-ortopediya taʼminoti",
+          desc: "Aholini protez-ortopediya buyumlari va reabilitatsiya texnik vositalari bilan taʼminlash",
+        },
+        {
+          phase: "2023",
+          name: "“107” qisqa raqami",
+          desc: "Tuni-kuni faoliyat koʻrsatadigan ijtimoiy yordam telefon hizmati",
+        },
+        {
+          phase: "2023",
+          name: "“Ijtimoiy taxi”",
+          desc: "Nogironligi boʻlgan va harakatlanish imkoniyati cheklangan shahslar uchun transport hizmati",
+        },
+        {
+          phase: "2023",
+          name: "Ijtimoiy karta",
+          desc: "Ijtimoiy hizmatlardan foydalanishni tezlashtiruvchi shaxsiy karta joriy etish",
+        },
+        {
+          phase: "2023",
+          name: "Bandlik subsidiyasi",
+          desc: "Nogironlarni ish bilan taʼminlovchi korxonalarni subsidiyalash",
+        },
+        {
+          phase: "2024-yan",
+          name: "Nafaqa toʻlovlari",
+          desc: "Yoshga doir, nogironlik va boquvchisini yoʻqotganlik nafaqalarini toʻlash",
+        },
+        {
+          phase: "2024-yan",
+          name: "Suyunchi puli",
+          desc: "Bola tugʻilishi munosabati bilan beriladigan bir martalik nafaqa",
+        },
+        {
+          phase: "2024-yan",
+          name: "Dafn xarajatlari",
+          desc: "Dafn marosimi harajatlarini qisman qoplash",
+        },
+        {
+          phase: "2024-yan",
+          name: "Yetimlarga uy-joy",
+          desc: "Etim va chin etim bolalarni uy-joy bilan taʼminlash",
+        },
+        {
+          phase: "2024-iyul",
+          name: "Maktab-internat ovqatlanishi",
+          desc: "Ixtisoslashtirilgan maktab-internatlarda oziqlanish harajatlarini qoplash",
+        },
+        {
+          phase: "2024-iyul",
+          name: "“Ayollar daftari” yordami",
+          desc: "Daftarga kiritilgan hotin-qizlarga moddiy yordam va yuridik hizmat",
+        },
+        {
+          phase: "2024-iyul",
+          name: "Kiyim-kechak va oʻquv qurollari",
+          desc: "Ijtimoiy himoyaga muhtoj oilalar farzandlarini taʼminlash",
+        },
+        {
+          phase: "2025-yan",
+          name: "Homiladorlik nafaqasi",
+          desc: "Ijtimoiy sugʻurta jamgʻarmasi hisobidan tugʻish nafaqalarini toʻlash",
+        },
+        {
+          phase: "2025-yan",
+          name: "Palliativ yordam va shelterlar",
+          desc: "Palliativ yordam koʻrsatish markazlari va shelterlar faoliyatini moliyalashtirish",
+        },
+        {
+          phase: "2025-yan",
+          name: "Uysizlarni reabilitatsiya qilish",
+          desc: "Doimiy yashash joyi boʻlmagan shahslar uchun ijtimoiy oshhonalar va markazlar",
+        },
+      ];
 
-/* ---------- NAV ---------- */
-const navToggle = document.getElementById('navToggle');
-const navLinks = document.getElementById('navLinks');
-navToggle.addEventListener('click', ()=> navLinks.classList.toggle('open'));
-navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=> navLinks.classList.remove('open')));
+      const orgNodes = [
+        {
+          t: "Ijtimoiy inspeksiya",
+          d: "Markaziy apparat va Qoraqalpogʻiston, viloyatlar, Toshkent shahri boʻyicha hududiy boʻlinmalar — nazorat va monitoring funksiyasini bajaradi.",
+        },
+        {
+          t: "“Inson” hizmat markazlari",
+          d: "Tuman va shahar darajasida — ijtimoiy hodimlar guruhlari, ruhiy-ijtimoiy mobil yordam hizmati va oilaviy bolalar uylarini oʻz ichiga oladi.",
+        },
+        {
+          t: "Reabilitatsiya va protezlash markazi",
+          d: "Nogironligi boʻlgan shahslarni protez-ortopediya buyumlari bilan taʼminlash va hududiy markazlar orqali hizmat koʻrsatish.",
+        },
+        {
+          t: "Ayollar va jabrdiydalarga yordam",
+          d: "“Muruvvat”, “Saxovat” interlan-uylari va odam savdosi jabrdiydalariga yordam berish respublika markazi.",
+        },
+        {
+          t: "Fahriylar pansionati",
+          d: "Urush va mehnat fahriylari uchun respublika pansionati hamda sanatoriylari.",
+        },
+        {
+          t: "Malaka oshirish markazi",
+          d: "Ijtimoiy himoya tizimi hodimlarining malakasini oshirish markazi va Ijtimoiy himoyani rivojlantirish instituti.",
+        },
+        {
+          t: "Davlat jamgʻarmasi",
+          d: "Ijtimoiy himoya davlat jamgʻarmasi va unga qarashli “Mehribonlik” uylari faoliyatini moliyalashtiradi.",
+        },
+        {
+          t: "Funksionallikni baholash",
+          d: "Nogironligi boʻlgan shahslarning funksionalligini baholash boshqarmasi va hududiy boʻlimlari.",
+        },
+      ];
 
-const sectionEls = document.querySelectorAll('section[id]');
-const navA = document.querySelectorAll('nav.links a');
-const spy = new IntersectionObserver((entries)=>{
-  entries.forEach(en=>{
-    if(en.isIntersecting){
-      navA.forEach(a=>a.classList.toggle('active', a.getAttribute('href')==='#'+en.target.id));
-    }
-  });
-},{rootMargin:'-40% 0px -50% 0px'});
-sectionEls.forEach(s=>spy.observe(s));
+      /* ---------- NAV ---------- */
+      const navToggle = document.getElementById("navToggle");
+      const navLinks = document.getElementById("navLinks");
+      navToggle.addEventListener("click", () =>
+        navLinks.classList.toggle("open"),
+      );
+      navLinks
+        .querySelectorAll("a")
+        .forEach((a) =>
+          a.addEventListener("click", () => navLinks.classList.remove("open")),
+        );
 
-/* ---------- REVEAL ---------- */
-const revealObs = new IntersectionObserver((entries)=>{
-  entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); revealObs.unobserve(en.target);} });
-},{threshold:0.12});
-document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
+      const sectionEls = document.querySelectorAll("section[id]");
+      const navA = document.querySelectorAll("nav.links a");
+      const spy = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((en) => {
+            if (en.isIntersecting) {
+              navA.forEach((a) =>
+                a.classList.toggle(
+                  "active",
+                  a.getAttribute("href") === "#" + en.target.id,
+                ),
+              );
+            }
+          });
+        },
+        { rootMargin: "-40% 0px -50% 0px" },
+      );
+      sectionEls.forEach((s) => spy.observe(s));
 
-/* ---------- COUNTERS ---------- */
-const counters = document.querySelectorAll('.num[data-target]');
-const countObs = new IntersectionObserver((entries)=>{
-  entries.forEach(en=>{
-    if(en.isIntersecting){
-      const el = en.target;
-      const target = parseInt(el.dataset.target,10);
-      const suffix = el.dataset.suffix || "";
-      let cur = 0;
-      const step = Math.max(1, Math.round(target/40));
-      const iv = setInterval(()=>{
-        cur += step;
-        if(cur>=target){cur=target; clearInterval(iv);}
-        el.textContent = cur + suffix;
-      }, 25);
-      countObs.unobserve(el);
-    }
-  });
-},{threshold:0.5});
-counters.forEach(c=>countObs.observe(c));
+      /* ---------- REVEAL ---------- */
+      const revealObs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((en) => {
+            if (en.isIntersecting) {
+              en.target.classList.add("in");
+              revealObs.unobserve(en.target);
+            }
+          });
+        },
+        { threshold: 0.12 },
+      );
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => revealObs.observe(el));
 
-/* ---------- DIRECTIONS TABS ---------- */
-const dirList = document.getElementById('dirList');
-const dirPanel = document.getElementById('dirPanel');
-function renderDir(idx){
-  const d = directions[idx];
-  dirPanel.innerHTML = `
+      /* ---------- COUNTERS ---------- */
+      const counters = document.querySelectorAll(".num[data-target]");
+      const countObs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((en) => {
+            if (en.isIntersecting) {
+              const el = en.target;
+              const target = parseInt(el.dataset.target, 10);
+              const suffix = el.dataset.suffix || "";
+              let cur = 0;
+              const step = Math.max(1, Math.round(target / 40));
+              const iv = setInterval(() => {
+                cur += step;
+                if (cur >= target) {
+                  cur = target;
+                  clearInterval(iv);
+                }
+                el.textContent = cur + suffix;
+              }, 25);
+              countObs.unobserve(el);
+            }
+          });
+        },
+        { threshold: 0.5 },
+      );
+      counters.forEach((c) => countObs.observe(c));
+
+      /* ---------- DIRECTIONS TABS ---------- */
+      const dirList = document.getElementById("dirList");
+      const dirPanel = document.getElementById("dirPanel");
+      function renderDir(idx) {
+        const d = directions[idx];
+        dirPanel.innerHTML = `
     <span class="tagline">${d.tag}</span>
     <h3>${d.roman}. ${d.title}</h3>
-    <ul>${d.items.map(i=>`<li>${i}</li>`).join('')}</ul>
+    <ul>${d.items.map((i) => `<li>${i}</li>`).join("")}</ul>
   `;
-}
-directions.forEach((d,idx)=>{
-  const btn = document.createElement('button');
-  btn.className = 'dir-item' + (idx===0 ? ' active' : '');
-  btn.innerHTML = `<span class="roman">${d.roman}</span><span>${d.title}</span>`;
-  btn.addEventListener('click', ()=>{
-    dirList.querySelectorAll('.dir-item').forEach(b=>b.classList.remove('active'));
-    btn.classList.add('active');
-    renderDir(idx);
-  });
-  dirList.appendChild(btn);
-});
-renderDir(0);
+      }
+      directions.forEach((d, idx) => {
+        const btn = document.createElement("button");
+        btn.className = "dir-item" + (idx === 0 ? " active" : "");
+        btn.innerHTML = `<span class="roman">${d.roman}</span><span>${d.title}</span>`;
+        btn.addEventListener("click", () => {
+          dirList
+            .querySelectorAll(".dir-item")
+            .forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          renderDir(idx);
+        });
+        dirList.appendChild(btn);
+      });
+      renderDir(0);
 
-/* ---------- TIMELINE ---------- */
-const tlEl = document.getElementById('timeline');
-timelineData.forEach((t,idx)=>{
-  const item = document.createElement('div');
-  item.className = 'ti-item t-item' + (idx===0 ? ' open':'');
-  item.innerHTML = `
-    <div class="t-dot">${idx+1}</div>
+      /* ---------- TIMELINE ---------- */
+      const tlEl = document.getElementById("timeline");
+      timelineData.forEach((t, idx) => {
+        const item = document.createElement("div");
+        item.className = "ti-item t-item" + (idx === 0 ? " open" : "");
+        item.innerHTML = `
+    <div class="t-dot">${idx + 1}</div>
     <span class="t-date">${t.date}</span>
     <div class="t-title">${t.title}</div>
-    <div class="t-body"><ul>${t.items.map(i=>`<li>${i}</li>`).join('')}</ul>
+    <div class="t-body"><ul>${t.items.map((i) => `<li>${i}</li>`).join("")}</ul>
       <span class="t-tag" style="color:#0d5c50; background:#dcebe6;">${t.tag} · PQ‑176</span>
       <span class="t-tag" style="color:#7a5b1e; background:#ece4d1;">Tashkilotlar roʻyxati · PF‑82</span>
     </div>
   `;
-  item.addEventListener('click', ()=>{
-    const wasOpen = item.classList.contains('open');
-    tlEl.querySelectorAll('.t-item').forEach(el=>el.classList.remove('open'));
-    if(!wasOpen) item.classList.add('open');
-  });
-  tlEl.appendChild(item);
-});
+        item.addEventListener("click", () => {
+          const wasOpen = item.classList.contains("open");
+          tlEl
+            .querySelectorAll(".t-item")
+            .forEach((el) => el.classList.remove("open"));
+          if (!wasOpen) item.classList.add("open");
+        });
+        tlEl.appendChild(item);
+      });
 
-/* ---------- FUND FILTERS ---------- */
-const fundFilters = document.getElementById('fundFilters');
-const fundGrid = document.getElementById('fundGrid');
-const phases = [
-  {key:'all', label:'Barchasi'},
-  {key:'2023', label:'2023, oktabr'},
-  {key:'2024-yan', label:'2024, yanvar'},
-  {key:'2024-iyul', label:'2024, iyul'},
-  {key:'2025-yan', label:'2025, yanvar'},
-];
-let activePhase = 'all';
-phases.forEach(p=>{
-  const b = document.createElement('button');
-  b.className = 'fund-filter-btn' + (p.key==='all' ? ' active' : '');
-  b.textContent = p.label;
-  b.addEventListener('click', ()=>{
-    activePhase = p.key;
-    fundFilters.querySelectorAll('.fund-filter-btn').forEach(x=>x.classList.remove('active'));
-    b.classList.add('active');
-    renderFund();
-  });
-  fundFilters.appendChild(b);
-});
-fundData.forEach(f=>{
-  const card = document.createElement('div');
-  card.className = 'fund-item';
-  card.dataset.phase = f.phase;
-  card.innerHTML = `<b>${f.name}</b>${f.desc}`;
-  fundGrid.appendChild(card);
-});
-function renderFund(){
-  fundGrid.querySelectorAll('.fund-item').forEach(el=>{
-    const show = activePhase==='all' || el.dataset.phase===activePhase;
-    el.classList.toggle('show', show);
-  });
-}
-renderFund();
+      /* ---------- FUND FILTERS ---------- */
+      const fundFilters = document.getElementById("fundFilters");
+      const fundGrid = document.getElementById("fundGrid");
+      const phases = [
+        { key: "all", label: "Barchasi" },
+        { key: "2023", label: "2023, oktabr" },
+        { key: "2024-yan", label: "2024, yanvar" },
+        { key: "2024-iyul", label: "2024, iyul" },
+        { key: "2025-yan", label: "2025, yanvar" },
+      ];
+      let activePhase = "all";
+      phases.forEach((p) => {
+        const b = document.createElement("button");
+        b.className = "fund-filter-btn" + (p.key === "all" ? " active" : "");
+        b.textContent = p.label;
+        b.addEventListener("click", () => {
+          activePhase = p.key;
+          fundFilters
+            .querySelectorAll(".fund-filter-btn")
+            .forEach((x) => x.classList.remove("active"));
+          b.classList.add("active");
+          renderFund();
+        });
+        fundFilters.appendChild(b);
+      });
+      fundData.forEach((f) => {
+        const card = document.createElement("div");
+        card.className = "fund-item";
+        card.dataset.phase = f.phase;
+        card.innerHTML = `<b>${f.name}</b>${f.desc}`;
+        fundGrid.appendChild(card);
+      });
+      function renderFund() {
+        fundGrid.querySelectorAll(".fund-item").forEach((el) => {
+          const show =
+            activePhase === "all" || el.dataset.phase === activePhase;
+          el.classList.toggle("show", show);
+        });
+      }
+      renderFund();
 
-/* ---------- ORG CHART ---------- */
-const orgBranches = document.getElementById('orgBranches');
-orgNodes.forEach(n=>{
-  const node = document.createElement('div');
-  node.className = 'org-node';
-  node.innerHTML = `<button><span>${n.t}</span><span class="plus">+</span></button><div class="sub"><p>${n.d}</p></div>`;
-  node.querySelector('button').addEventListener('click', ()=> node.classList.toggle('open'));
-  orgBranches.appendChild(node);
-});
-</script>
-</body>
+      /* ---------- ORG CHART ---------- */
+      const orgBranches = document.getElementById("orgBranches");
+      orgNodes.forEach((n) => {
+        const node = document.createElement("div");
+        node.className = "org-node";
+        node.innerHTML = `<button><span>${n.t}</span><span class="plus">+</span></button><div class="sub"><p>${n.d}</p></div>`;
+        node
+          .querySelector("button")
+          .addEventListener("click", () => node.classList.toggle("open"));
+        orgBranches.appendChild(node);
+      });
+    </script>
+  </body>
 </html>
